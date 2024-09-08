@@ -19,16 +19,16 @@ function App() {
         { title: newTodo, id: Date.now() },
       ]);
       setNewTodo("");
-      toast.success("Successfully added!");
+      toast.success("Ma'lumot muvoffaqiyatli qo'shildi!");
     } else {
-      toast.error("Please enter a task!");
+      toast.error("Maydon bo'sh bo'lishi mumkin emas!");
     }
   };
 
   const handleDeleteTodo = (id) => {
     const filteredTodos = todos.filter(todo => todo.id !== id);
     setTodos(filteredTodos);
-    toast.success("Todo deleted!");
+    toast.error("Ma'lumot o'chirildi!");
   };
 
   const handleEditTodo = (id) => {
@@ -42,13 +42,13 @@ function App() {
       todo.id === id ? { ...todo, title: editTodoText } : todo
     );
     setTodos(updatedTodos);
-    setEditTodoId(null);
+    setEditTodoId("");
     setEditTodoText("");
-    toast.success("Successfully updated!");
+    toast.success("Ma'lumot yangilandi!");
   };
 
   const handleCancelEdit = () => {
-    setEditTodoId(null);
+    setEditTodoId("");
     setEditTodoText("");
   };
 
@@ -71,23 +71,23 @@ function App() {
         </form>
         <ul className="todos__data">
           {todos.map((todo) => (
-            <li className="todos_item" key={todo.id}>
+            <li className="todos_item" key={todo.id} >
               {editTodoId === todo.id ? (
                 <>
-                  <input
+                  <input className="edit_modal"
                     type="text"
                     value={editTodoText}
                     onChange={(e) => setEditTodoText(e.target.value)}
                   />
                   <button
                     onClick={() => handleSaveEdit(todo.id)}
-                    className="todos__btn save"
+                    className="edit_btn_save"
                   >
                     Save
                   </button>
                   <button
                     onClick={handleCancelEdit}
-                    className="todos__btn cancel"
+                    className="edit_btn_cancel "
                   >
                     Cancel
                   </button>

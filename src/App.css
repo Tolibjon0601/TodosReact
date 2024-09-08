@@ -8,19 +8,18 @@
 .todos{
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(to left, #58adda, #5c49ea);
 
 }
 
 
-.todos__block{
-
-}
 .todo_input{
 padding: 15px 10px;
-width: 350px;
+width: 370px;
 font-size: 20px;
 font-weight: 500;
-/*  */
+background-color: wheat;
+border: none;
 }
 .todoForm{
 width: 500px;
@@ -30,13 +29,23 @@ margin: 0 auto;
   padding: 15px 10px;
   font-size: 20px;
 font-weight: 500;
+border: none;
+cursor: pointer;
+&:hover{
+  background-color: #f78040;
+  color: white;
+}
 }
 .todos__btn{
-  margin-right: 10px;
+
+  margin-left: 15px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 
+}
+.delete{
+  margin-right: 15px;
 }
 .btn{
   width: 14px;
@@ -44,8 +53,48 @@ font-weight: 500;
 
 }
 .todos_item{
-  padding: 5px 0;
-  align-items: center;
-  display: flex;
-  background-color: #fff;
+	display: flex;
+	background-image: linear-gradient(to right, #80d9f5, #2d82e3);
+	background-color: #7e89a1;
+	padding: 16px;
+	border-radius: 16px;
+	margin-bottom: 16px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+.edit_modal{
+  width: 600px;
+  height: 40px;
+border-radius: 5px;
+background-color: #3b93f9;
+border:#3b93f9;
+color: white;
+font-size: 18px;
+font-weight: 500;
+text-align: center;
+}
+.edit_btn_save{
+  height: 40px;
+  border: none;
+margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+font-size: 14px;
+font-weight: 500;
+padding: 10px;
+background-color: #34eb68b4;
+}
+
+.edit_btn_cancel{
+  height: 40px;
+  border: none;
+margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+font-size: 14px;
+font-weight: 500;
+padding: 10px;
+background-color: #e74a4a ;
 }
