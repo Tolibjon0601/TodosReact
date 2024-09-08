@@ -4,9 +4,16 @@
   font-weight: 700;
   color:rgb(25, 215, 129);
 }
-.todos__data{
-/* text-align: center; */
-text-decoration: none;
+
+.todos{
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.todos__block{
+
 }
 .todo_input{
 padding: 15px 10px;
@@ -23,4 +30,22 @@ margin: 0 auto;
   padding: 15px 10px;
   font-size: 20px;
 font-weight: 500;
+}
+.todos__btn{
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+.btn{
+  width: 14px;
+  height: 16px;
+
+}
+.todos_item{
+  padding: 5px 0;
+  align-items: center;
+  display: flex;
+  background-color: #fff;
 }
