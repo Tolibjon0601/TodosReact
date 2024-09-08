@@ -1,0 +1,26 @@
+.todo__title{
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color:rgb(25, 215, 129);
+}
+.todos__data{
+/* text-align: center; */
+text-decoration: none;
+}
+.todo_input{
+padding: 15px 10px;
+width: 350px;
+font-size: 20px;
+font-weight: 500;
+/*  */
+}
+.todoForm{
+width: 500px;
+margin: 0 auto;
+}
+.todo_btn{
+  padding: 15px 10px;
+  font-size: 20px;
+font-weight: 500;
+}
