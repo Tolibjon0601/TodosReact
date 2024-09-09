@@ -71,7 +71,13 @@ function App() {
         </form>
         <ul className="todos__data">
           {todos.map((todo) => (
-            <li className="todos_item" key={todo.id} >
+            <li className="todos_item" key={todo.id} style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+    <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => handleCheckboxChange(todo.id)}
+    />
+
               {editTodoId === todo.id ? (
                 <>
                   <input className="edit_modal"
